@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+
+  prestashop:
+    image: prestashop/prestashop:1.7-7.2-apache
+    ports:
+      - 8080:80
+    environment:
+      PS_DEV_MODE: 0
+      PS_DEMO_MODE: 1
+      DB_SERVER: mysql
+      DB_USER: root
+      DB_PASSWD: root
+      DB_NAME: prestashop
+      DB_PREFIX: ps_
+      PS_LANGUAGE: es
+      PS_COUNTRY: ES
+      PS_FOLDER_ADMIN: ps-admin
+    links:
+      - mysql:mysql
+    volumes:
+      - ./src:/var/www/html
+
+  mysql:
+    image: mysql:8.0.13
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prestashop
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql/data
