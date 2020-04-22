@@ -24,7 +24,7 @@ requerimientos:
 Descargamos el proyecto en zip o por haciendo uso de git.
 
 ```
-git@gitlab.com:AbrahanZarza/prestashop-docker.git
+https://github.com/AbrahanZarza/prestashop-docker.git
 ```
 
 Nos movemos hasta el directorio raíz del proyecto y una vez allí, arrancamos los servicios de docker.
