@@ -104,7 +104,7 @@ panel de administración.
 
 - [Docker](https://www.docker.com/) - Software para contenerización.
 - [Docker Compose](https://docs.docker.com/compose/) - Wrapper para Docker.
-- [Prestashop](https://rometools.github.io/rome/) - Software CMS para E-commerce. 
+- [Prestashop](https://www.prestashop.com/) - Software CMS para E-commerce. 
 
 ## Autores
 
